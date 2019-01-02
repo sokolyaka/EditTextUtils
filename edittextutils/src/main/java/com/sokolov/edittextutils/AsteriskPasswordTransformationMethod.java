@@ -1,6 +1,5 @@
 package com.sokolov.edittextutils;
 
-import android.support.annotation.NonNull;
 import android.text.method.PasswordTransformationMethod;
 import android.view.View;
 
@@ -29,7 +28,6 @@ public class AsteriskPasswordTransformationMethod extends PasswordTransformation
             return mSource.subSequence(start, end);
         }
 
-        @NonNull
         @Override
         public String toString() {
             return mSource.toString();
