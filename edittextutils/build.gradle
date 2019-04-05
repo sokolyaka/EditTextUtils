@@ -13,7 +13,7 @@ ext {
     siteUrl = 'https://github.com/sokolyaka/edittextutils'
     gitUrl = 'https://github.com/sokolyaka/edittextutils.git'
 
-    libraryVersion = '1.0.0'
+    libraryVersion = '1.0.1'
 
     developerId = 'sokolyaka'
     developerName = 'Oleh Sokolov'
@@ -33,7 +33,7 @@ android {
         minSdkVersion 19
         targetSdkVersion 27
         versionCode 1
-        versionName "1.0.0"
+        versionName "1.0.1"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
