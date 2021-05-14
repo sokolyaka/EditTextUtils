@@ -1,29 +1,5 @@
 apply plugin: 'com.android.library'
 
-ext {
-    bintrayRepo = 'maven'
-    bintrayName = 'edittextutils'
-
-    publishedGroupId = 'com.github.sokolyaka'
-    libraryName = 'edittextutils'
-    artifact = 'edittextutils'
-
-    libraryDescription = 'Set of utilities to work with the EditText in Android.'
-
-    siteUrl = 'https://github.com/sokolyaka/edittextutils'
-    gitUrl = 'https://github.com/sokolyaka/edittextutils.git'
-
-    libraryVersion = '1.0.1'
-
-    developerId = 'sokolyaka'
-    developerName = 'Oleh Sokolov'
-    developerEmail = 'sokolov.ob@gmail.com'
-
-    licenseName = 'The Apache Software License, Version 2.0'
-    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
-    allLicenses = ["Apache-2.0"]
-}
-
 android {
     compileSdkVersion 27
 
@@ -57,5 +33,14 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 }
 
-apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
-apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
+ext {
+    publishedGroupId = 'com.github.sokolyaka'
+    publishedArtifactId = 'edittextutils'
+    publishedVersion = '1.0.1'
+    aarPath = "$buildDir/outputs/aar/${publishedArtifactId}-release.aar"
+
+    GITHUB_USERID = 'sokolyaka'
+    REPOSITORY = 'edittextutils'
+}
+
+apply from: 'https://raw.githubusercontent.com/sokolyaka/maven/main/github_maven_android.gradle'
